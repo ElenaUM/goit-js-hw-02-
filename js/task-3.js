@@ -1,4 +1,12 @@
-function checkForSpam(message) {}
+function checkForSpam(message) {
+  const blacklistedWord1 = "spam";
+  const blacklistedWord2 = "sale";
+
+  return (
+    message.toLowerCase().includes(blacklistedWord1) ||
+    message.toLowerCase().includes(blacklistedWord2)
+  );
+}
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
